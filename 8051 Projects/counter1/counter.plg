@@ -1,0 +1,24 @@
+<html>
+<body>
+<pre>
+<h1>µVision3 Build Log</h1>
+<h2>Project:</h2>
+D:\abhishek\counter.uv2
+Project File Date:  07/31/2013
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling count.c...
+linking...
+Program Size: data=39.0 xdata=0 code=661
+creating hex file from "counter"...
+"counter" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling count.c...
+linking...
+Program Size: data=39.0 xdata=0 code=661
+creating hex file from "counter"...
+"counter" - 0 Error(s), 0 Warning(s).
+</pre>
+</body>
+</html>

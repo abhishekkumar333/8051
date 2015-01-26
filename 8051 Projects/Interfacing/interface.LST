@@ -1,0 +1,135 @@
+C51 COMPILER V8.02   INTERFACE                                                             07/29/2013 17:11:30 PAGE 1   
+
+
+C51 COMPILER V8.02, COMPILATION OF MODULE INTERFACE
+OBJECT MODULE PLACED IN interface.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE interface.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg51.h>
+   2          void delay();
+   3          sbit RS=P3^2;
+   4          sbit RW=P3^1;
+   5          sbit EN=P3^0;
+   6          #define Dataport P2
+   7          //unsigned char g_bydata=0Xff;
+   8          
+   9          void fun1();
+  10          void fun2();
+  11          void fun3();
+  12          void lcd_cmd(unsigned char p_bycmd)
+  13          {
+  14   1      RS=0;
+  15   1      RW=0;
+  16   1      Dataport=p_bycmd;
+  17   1      EN=1;
+  18   1      delay();
+  19   1      EN=0;
+  20   1      }
+  21          
+  22          void lcd_dat(unsigned char p_bydata)
+  23          {
+  24   1      RS=1;
+  25   1      RW=0;
+  26   1      Dataport=p_bydata;
+  27   1      EN=1;
+  28   1      delay();
+  29   1      EN=0;
+  30   1      }
+  31          
+  32          void lcd_init()
+  33          {
+  34   1      lcd_cmd(0X38);
+  35   1      delay();
+  36   1      lcd_cmd(0x0E);
+  37   1      delay();
+  38   1      lcd_cmd(0xC0);
+  39   1      delay();
+  40   1      }
+  41          
+  42          void display_row(unsigned char p_byrow,unsigned char p_byDataArr[16])
+  43          {
+  44   1      //row=0;
+  45   1      //row=1;
+  46   1      unsigned char count,ch;
+  47   1      if(p_byrow)
+  48   1      lcd_cmd(0Xc0);
+  49   1      else
+  50   1      lcd_cmd(0X80);
+  51   1      for(count=0;count<16;count++)
+  52   1      {
+  53   2      if(ch=p_byDataArr[count])
+  54   2      lcd_dat(ch);
+  55   2      else
+C51 COMPILER V8.02   INTERFACE                                                             07/29/2013 17:11:30 PAGE 2   
+
+  56   2      while(count<16)
+  57   2      {
+  58   3      lcd_dat(' ');
+  59   3      count++;
+  60   3      }
+  61   2      }
+  62   1      }
+  63          
+  64          void main()
+  65          {
+  66   1      lcd_init();
+  67   1      while(1)
+  68   1      {
+  69   2      P1=0x80;
+  70   2      fun1();
+  71   2      delay();
+  72   2      P1=0x00;
+  73   2      fun3();
+  74   2      delay();
+  75   2      P1=0x40;
+  76   2      fun2();
+  77   2      delay();
+  78   2      }
+  79   1      }
+  80          void delay()
+  81          {
+  82   1      int i;
+  83   1      for(i=0;i<30000;i++)
+  84   1      {}
+  85   1      }
+  86          void fun1()
+  87          {
+  88   1      
+  89   1      
+  90   1      lcd_dat(0x01);
+  91   1      display_row(0,"Clockwise");
+  92   1      
+  93   1      }
+  94          void fun2()
+  95          {
+  96   1      
+  97   1      
+  98   1      lcd_dat(0x01);
+  99   1      display_row(0,"Anticlockwise");
+ 100   1      
+ 101   1      }
+ 102          void fun3()
+ 103          {
+ 104   1      
+ 105   1      lcd_dat(0x01);
+ 106   1      display_row(0,"Stop");
+ 107   1      
+ 108   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    211    ----
+   CONSTANT SIZE    =     29    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       4
+   IDATA SIZE       =   ----    ----
+C51 COMPILER V8.02   INTERFACE                                                             07/29/2013 17:11:30 PAGE 3   
+
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

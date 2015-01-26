@@ -1,0 +1,44 @@
+C51 COMPILER V8.02   FASTMOTOR                                                             07/29/2013 16:54:58 PAGE 1   
+
+
+C51 COMPILER V8.02, COMPILATION OF MODULE FASTMOTOR
+OBJECT MODULE PLACED IN fastmotor.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE fastmotor.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg51.h>
+   2          void delay();
+   3          void main()
+   4          {
+   5   1      while(1)
+   6   1      {
+   7   2      P1=0x80;
+   8   2      delay();
+   9   2      P1=0x40;
+  10   2      delay();
+  11   2      }
+  12   1      }
+  13          void delay()
+  14          {
+  15   1      int i,j;
+  16   1      for(j=0;j<30;j++)
+  17   1      {
+  18   2      for(i=0;i<30000;i++)
+  19   2      {}
+  20   2      }
+  21   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     43    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

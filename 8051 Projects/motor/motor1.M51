@@ -1,0 +1,96 @@
+BL51 BANKED LINKER/LOCATER V6.00                                                        07/29/2013  16:46:33  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.00, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE motor1.obj TO motor1 RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  motor1.obj (MOTOR1)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?SLCMP)
+
+
+LINK MAP OF MODULE:  motor1 (MOTOR1)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     001BH     UNIT         ?PR?DELAY?MOTOR1
+            CODE    081BH     0016H     UNIT         ?C?LIB_CODE
+            CODE    0831H     0011H     UNIT         ?PR?MAIN?MOTOR1
+            CODE    0842H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   motor1 (MOTOR1)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?MOTOR1
+
+?PR?MAIN?MOTOR1
+  +--> ?PR?DELAY?MOTOR1
+
+
+
+SYMBOL TABLE OF MODULE:  motor1 (MOTOR1)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MOTOR1
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  C:0800H         PUBLIC        delay
+  C:0831H         PUBLIC        main
+  -------         PROC          MAIN
+BL51 BANKED LINKER/LOCATER V6.00                                                      07/29/2013  16:46:33  PAGE 2
+
+
+  C:0831H         LINE#         3
+  C:0831H         LINE#         4
+  C:0831H         LINE#         5
+  C:0831H         LINE#         6
+  C:0831H         LINE#         7
+  C:0834H         LINE#         8
+  C:0837H         LINE#         9
+  C:083AH         LINE#         10
+  C:083DH         LINE#         11
+  C:0840H         LINE#         12
+  -------         ENDPROC       MAIN
+  -------         PROC          DELAY
+  -------         DO            
+  D:0082H         SYMBOL        i
+  -------         ENDDO         
+  C:0800H         LINE#         15
+  C:0800H         LINE#         16
+  C:0800H         LINE#         18
+  C:081AH         LINE#         19
+  -------         ENDPROC       DELAY
+  -------         ENDMOD        MOTOR1
+
+  -------         MODULE        ?C?SLCMP
+  C:081BH         PUBLIC        ?C?SLCMP
+  -------         ENDMOD        ?C?SLCMP
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 002CH BYTE ( 2%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=81
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

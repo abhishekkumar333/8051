@@ -1,0 +1,191 @@
+BL51 BANKED LINKER/LOCATER V6.00                                                        08/12/2013  17:29:56  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.00, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE clock.obj TO clock RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  clock.obj (CLOCK)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?COPY)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?UIDIV)
+
+
+LINK MAP OF MODULE:  clock (CLOCK)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     001EH     UNIT         _DATA_GROUP_
+            IDATA   0026H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     014BH     UNIT         ?C?LIB_CODE
+            CODE    094BH     00CAH     UNIT         ?PR?MAIN?CLOCK
+            CODE    0A15H     0033H     UNIT         ?PR?_SELECTDISPLAY?CLOCK
+            CODE    0A48H     002BH     UNIT         ?PR?_DELAY?CLOCK
+            CODE    0A73H     0014H     UNIT         ?CO?CLOCK
+            CODE    0A87H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   clock (CLOCK)
+
+
+SEGMENT                            DATA_GROUP 
+  +--> CALLED SEGMENT            START    LENGTH
+------------------------------------------------
+?C_C51STARTUP                    -----    -----
+  +--> ?PR?MAIN?CLOCK
+
+?PR?MAIN?CLOCK                   0008H    001EH
+  +--> ?CO?CLOCK
+  +--> ?PR?_SELECTDISPLAY?CLOCK
+  +--> ?PR?_DELAY?CLOCK
+
+
+
+SYMBOL TABLE OF MODULE:  clock (CLOCK)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+BL51 BANKED LINKER/LOCATER V6.00                                                      08/12/2013  17:29:56  PAGE 2
+
+
+  -------         MODULE        CLOCK
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  C:094BH         PUBLIC        main
+  C:0A15H         PUBLIC        _selectDisplay
+  C:0A73H         SYMBOL        _?ix1000
+  B:00B0H.7       PUBLIC        disp1
+  B:00B0H.6       PUBLIC        disp2
+  B:00B0H.5       PUBLIC        disp3
+  B:00B0H.4       PUBLIC        disp4
+  C:0A53H         PUBLIC        _delay
+  C:0A48H         SYMBOL        L?0029
+  -------         PROC          L?0028
+  -------         ENDPROC       L?0028
+  C:0A48H         SYMBOL        L?0029
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        time
+  -------         DO            
+  D:0004H         SYMBOL        i
+  D:0002H         SYMBOL        j
+  -------         ENDDO         
+  C:0A53H         LINE#         9
+  C:0A53H         LINE#         10
+  C:0A53H         LINE#         12
+  C:0A56H         LINE#         13
+  C:0A60H         LINE#         14
+  C:0A72H         LINE#         15
+  -------         ENDPROC       _DELAY
+  -------         PROC          _SELECTDISPLAY
+  D:0006H         SYMBOL        i
+  C:0A15H         LINE#         17
+  C:0A15H         LINE#         18
+  C:0A15H         LINE#         19
+  C:0A1BH         LINE#         20
+  C:0A1BH         LINE#         21
+  C:0A1DH         LINE#         22
+  C:0A1FH         LINE#         23
+  C:0A1FH         LINE#         24
+  C:0A1FH         LINE#         25
+  C:0A21H         LINE#         26
+  C:0A27H         LINE#         27
+  C:0A27H         LINE#         28
+  C:0A29H         LINE#         29
+  C:0A2BH         LINE#         30
+  C:0A2DH         LINE#         31
+  C:0A2FH         LINE#         32
+  C:0A30H         LINE#         33
+  C:0A36H         LINE#         34
+  C:0A36H         LINE#         35
+  C:0A38H         LINE#         36
+  C:0A3AH         LINE#         37
+  C:0A3CH         LINE#         38
+  C:0A3EH         LINE#         39
+  C:0A3FH         LINE#         41
+  C:0A3FH         LINE#         42
+  C:0A41H         LINE#         43
+BL51 BANKED LINKER/LOCATER V6.00                                                      08/12/2013  17:29:56  PAGE 3
+
+
+  C:0A43H         LINE#         44
+  C:0A45H         LINE#         45
+  C:0A47H         LINE#         46
+  C:0A47H         LINE#         47
+  -------         ENDPROC       _SELECTDISPLAY
+  -------         PROC          MAIN
+  -------         DO            
+  D:0008H         SYMBOL        counter
+  D:0082H         SYMBOL        count
+  D:0002H         SYMBOL        c
+  D:001CH         SYMBOL        d1
+  D:001EH         SYMBOL        d2
+  D:0020H         SYMBOL        d3
+  D:0022H         SYMBOL        d4
+  D:0024H         SYMBOL        i
+  -------         ENDDO         
+  C:094BH         LINE#         51
+  C:094BH         LINE#         52
+  C:094BH         LINE#         54
+  C:095EH         LINE#         56
+  C:0961H         LINE#         59
+  C:0961H         LINE#         60
+  C:0961H         LINE#         61
+  C:0970H         LINE#         62
+  C:097FH         LINE#         63
+  C:098AH         LINE#         64
+  C:0999H         LINE#         65
+  C:09A4H         LINE#         66
+  C:09B3H         LINE#         67
+  C:09B8H         LINE#         68
+  C:09B8H         LINE#         69
+  C:09BFH         LINE#         70
+  C:09CAH         LINE#         71
+  C:09CEH         LINE#         73
+  C:09D3H         LINE#         74
+  C:09D5H         LINE#         75
+  C:09D8H         LINE#         77
+  C:09DDH         LINE#         78
+  C:09DFH         LINE#         79
+  C:09E2H         LINE#         81
+  C:09E7H         LINE#         82
+  C:09E9H         LINE#         83
+  C:09ECH         LINE#         85
+  C:09FDH         LINE#         86
+  C:0A09H         LINE#         87
+  C:0A0DH         LINE#         89
+  C:0A12H         LINE#         90
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        CLOCK
+
+  -------         MODULE        ?C?COPY
+  C:08D0H         PUBLIC        ?C?COPY
+  -------         ENDMOD        ?C?COPY
+
+  -------         MODULE        ?C?UIDIV
+  C:08F6H         PUBLIC        ?C?UIDIV
+  -------         ENDMOD        ?C?UIDIV
+BL51 BANKED LINKER/LOCATER V6.00                                                      08/12/2013  17:29:56  PAGE 4
+
+
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 013CH BYTE (15%) *
+******************************************************************************
+
+Program Size: data=39.0 xdata=0 code=662
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,42 @@
+C51 COMPILER V8.02   LED2                                                                  07/26/2013 14:50:36 PAGE 1   
+
+
+C51 COMPILER V8.02, COMPILATION OF MODULE LED2
+OBJECT MODULE PLACED IN led2.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE led2.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg51.h>
+   2          void delay();
+   3          void main()
+   4          {
+   5   1      P0=~0xFF;
+   6   1      delay();
+   7   1      P0=~0xE7;
+   8   1      delay();
+   9   1      P0=~0xC3;
+  10   1      delay();
+  11   1      P0=~0x81;
+  12   1      delay();
+  13   1      
+  14   1      }
+  15          void delay()
+  16          {
+  17   1      unsigned int i;
+  18   1      for(i=0;i<=50000;i++);
+  19   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     50    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

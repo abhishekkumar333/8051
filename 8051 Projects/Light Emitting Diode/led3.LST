@@ -1,0 +1,63 @@
+C51 COMPILER V8.02   LED3                                                                  07/26/2013 15:09:36 PAGE 1   
+
+
+C51 COMPILER V8.02, COMPILATION OF MODULE LED3
+OBJECT MODULE PLACED IN led3.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE led3.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          
+   2          #include<reg51.h>
+   3          void delay();
+   4          void main()
+   5          {
+   6   1      P0=~0xC0;
+   7   1      delay();
+   8   1      P0=~0x60;
+   9   1      delay();
+  10   1      P0=~0x30;
+  11   1      delay();
+  12   1      P0=~0x18;
+  13   1      delay();
+  14   1      P0=~0x0C;
+  15   1      delay();
+  16   1      P0=~0x06;
+  17   1      delay();
+  18   1      P0=~0x03;
+  19   1      delay();
+  20   1      P0=~0x03;
+  21   1      delay();
+  22   1      P0=~0x06;
+  23   1      delay();
+  24   1      P0=~0x0C;
+  25   1      delay();
+  26   1      P0=~0x18;
+  27   1      delay();
+  28   1      P0=~0x30;
+  29   1      delay();
+  30   1      P0=~0x60;
+  31   1      delay();
+  32   1      P0=~0xC0;
+  33   1      delay();
+  34   1      
+  35   1      }
+  36          void delay()
+  37          {
+  38   1      int i;
+  39   1      for(i=0;i<=3000;i++);
+  40   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     99    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

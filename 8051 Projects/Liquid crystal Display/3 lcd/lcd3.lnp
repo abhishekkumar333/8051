@@ -1,0 +1,3 @@
+"lcd3.obj" 
+TO "lcd3" 
+RAMSIZE(256) 

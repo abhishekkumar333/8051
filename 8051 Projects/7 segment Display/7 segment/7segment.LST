@@ -1,0 +1,181 @@
+C51 COMPILER V8.02   7SEGMENT                                                              07/30/2013 16:09:36 PAGE 1   
+
+
+C51 COMPILER V8.02, COMPILATION OF MODULE 7SEGMENT
+OBJECT MODULE PLACED IN 7segment.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE 7segment.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg51.h>
+   2          sbit a=P3^7;
+   3          sbit b=P3^6;
+   4          sbit c=P3^5;
+   5          sbit d=P3^4;
+   6          void delay();
+   7          void main()
+   8          {
+   9   1      
+  10   1       a=0;
+  11   1       P2=0x88;
+  12   1       delay();
+  13   1       P2=0xEB;
+  14   1       delay();
+  15   1       P2=0x4C;
+  16   1       delay();
+  17   1       P2=0x49;
+  18   1       delay();
+  19   1       P2=0x2B;
+  20   1       delay();
+  21   1       P2=0x19;
+  22   1       delay();
+  23   1       P2=0x18;
+  24   1       delay();
+  25   1       P2=0x8B;
+  26   1       delay();
+  27   1       P2=0x08;
+  28   1       delay();
+  29   1       P2=0x0B;
+  30   1       delay();
+  31   1       P2=0x0A;
+  32   1       delay();
+  33   1       P2=0x08;
+  34   1       delay();
+  35   1       P2=0x9C;
+  36   1       delay();
+  37   1       P2=0x88;
+  38   1       delay();
+  39   1       P2=0x1C;
+  40   1       delay();
+  41   1       P2=0x1E;
+  42   1       delay();
+  43   1      
+  44   1       b=0;
+  45   1      
+  46   1       P2=0x88;
+  47   1       delay();
+  48   1       P2=0xEB;
+  49   1       delay();
+  50   1       P2=0x4C;
+  51   1       delay();
+  52   1       P2=0x49;
+  53   1       delay();
+  54   1       P2=0x2B;
+  55   1       delay();
+C51 COMPILER V8.02   7SEGMENT                                                              07/30/2013 16:09:36 PAGE 2   
+
+  56   1       P2=0x19;
+  57   1       delay();
+  58   1       P2=0x18;
+  59   1       delay();
+  60   1       P2=0x8B;
+  61   1       delay();
+  62   1       P2=0x08;
+  63   1       delay();
+  64   1       P2=0x0B;
+  65   1       delay();
+  66   1       P2=0x0A;
+  67   1       delay();
+  68   1       P2=0x08;
+  69   1       delay();
+  70   1       P2=0x9C;
+  71   1       delay();
+  72   1       P2=0x88;
+  73   1       delay();
+  74   1       P2=0x1C;
+  75   1       delay();
+  76   1       P2=0x1E;
+  77   1       delay();
+  78   1      
+  79   1       c=0;
+  80   1      
+  81   1       P2=0x88;
+  82   1       delay();
+  83   1       P2=0xEB;
+  84   1       delay();
+  85   1       P2=0x4C;
+  86   1       delay();
+  87   1       P2=0x49;
+  88   1       delay();
+  89   1       P2=0x2B;
+  90   1       delay();
+  91   1       P2=0x19;
+  92   1       delay();
+  93   1       P2=0x18;
+  94   1       delay();
+  95   1       P2=0x8B;
+  96   1       delay();
+  97   1       P2=0x08;
+  98   1       delay();
+  99   1       P2=0x0B;
+ 100   1       delay();
+ 101   1       P2=0x0A;
+ 102   1       delay();
+ 103   1       P2=0x08;
+ 104   1       delay();
+ 105   1       P2=0x9C;
+ 106   1       delay();
+ 107   1       P2=0x88;
+ 108   1       delay();
+ 109   1       P2=0x1C;
+ 110   1       delay();
+ 111   1       P2=0x1E;
+ 112   1       delay();
+ 113   1      
+ 114   1       d=0;
+ 115   1      
+ 116   1        
+ 117   1       P2=0x88;
+C51 COMPILER V8.02   7SEGMENT                                                              07/30/2013 16:09:36 PAGE 3   
+
+ 118   1       delay();
+ 119   1       P2=0xEB;
+ 120   1       delay();
+ 121   1       P2=0x4C;
+ 122   1       delay();
+ 123   1       P2=0x49;
+ 124   1       delay();
+ 125   1       P2=0x2B;
+ 126   1       delay();
+ 127   1       P2=0x19;
+ 128   1       delay();
+ 129   1       P2=0x18;
+ 130   1       delay();
+ 131   1       P2=0x8B;
+ 132   1       delay();
+ 133   1       P2=0x08;
+ 134   1       delay();
+ 135   1       P2=0x0B;
+ 136   1       delay();
+ 137   1       P2=0x0A;
+ 138   1       delay();
+ 139   1       P2=0x08;
+ 140   1       delay();
+ 141   1       P2=0x9C;
+ 142   1       delay();
+ 143   1       P2=0x88;
+ 144   1       delay();
+ 145   1       P2=0x1C;
+ 146   1       delay();
+ 147   1       P2=0x1E;
+ 148   1       delay();
+ 149   1      }
+ 150          void delay()
+ 151          {
+ 152   1      int i;
+ 153   1      for(i=0;i<30000;i++);
+ 154   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    404    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

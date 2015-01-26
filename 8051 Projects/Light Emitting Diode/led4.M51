@@ -1,0 +1,98 @@
+BL51 BANKED LINKER/LOCATER V6.00                                                        07/26/2013  15:24:03  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.00, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE led4.obj TO led4 RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  led4.obj (LED4)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  led4 (LED4)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     0030H     UNIT         ?PR?MAIN?LED4
+            CODE    0830H     000FH     UNIT         ?PR?DELAY?LED4
+            CODE    083FH     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   led4 (LED4)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?LED4
+
+?PR?MAIN?LED4
+  +--> ?PR?DELAY?LED4
+
+
+
+SYMBOL TABLE OF MODULE:  led4 (LED4)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        LED4
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  C:0830H         PUBLIC        delay
+  C:0800H         PUBLIC        main
+  -------         PROC          MAIN
+  C:0800H         LINE#         4
+  C:0800H         LINE#         5
+BL51 BANKED LINKER/LOCATER V6.00                                                      07/26/2013  15:24:03  PAGE 2
+
+
+  C:0800H         LINE#         6
+  C:0803H         LINE#         7
+  C:0806H         LINE#         8
+  C:0809H         LINE#         9
+  C:080CH         LINE#         10
+  C:080FH         LINE#         11
+  C:0812H         LINE#         12
+  C:0815H         LINE#         13
+  C:0818H         LINE#         14
+  C:081BH         LINE#         15
+  C:081EH         LINE#         16
+  C:0821H         LINE#         17
+  C:0824H         LINE#         18
+  C:0827H         LINE#         19
+  C:082AH         LINE#         20
+  C:082DH         LINE#         21
+  -------         ENDPROC       MAIN
+  -------         PROC          DELAY
+  -------         DO            
+  D:0006H         SYMBOL        i
+  -------         ENDDO         
+  C:0830H         LINE#         24
+  C:0830H         LINE#         25
+  C:0830H         LINE#         27
+  C:083EH         LINE#         28
+  -------         ENDPROC       DELAY
+  -------         ENDMOD        LED4
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 003FH BYTE ( 3%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=78
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

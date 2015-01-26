@@ -1,0 +1,96 @@
+BL51 BANKED LINKER/LOCATER V6.00                                                        07/26/2013  14:50:36  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.00, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE led2.obj TO led2 RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  led2.obj (LED2)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?SLCMP)
+
+
+LINK MAP OF MODULE:  led2 (LED2)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     001AH     UNIT         ?PR?DELAY?LED2
+            CODE    081AH     0018H     UNIT         ?PR?MAIN?LED2
+            CODE    0832H     0016H     UNIT         ?C?LIB_CODE
+            CODE    0848H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   led2 (LED2)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?LED2
+
+?PR?MAIN?LED2
+  +--> ?PR?DELAY?LED2
+
+
+
+SYMBOL TABLE OF MODULE:  led2 (LED2)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        LED2
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  C:0800H         PUBLIC        delay
+  C:081AH         PUBLIC        main
+  -------         PROC          MAIN
+BL51 BANKED LINKER/LOCATER V6.00                                                      07/26/2013  14:50:36  PAGE 2
+
+
+  C:081AH         LINE#         3
+  C:081AH         LINE#         4
+  C:081AH         LINE#         5
+  C:081DH         LINE#         6
+  C:0820H         LINE#         7
+  C:0823H         LINE#         8
+  C:0826H         LINE#         9
+  C:0829H         LINE#         10
+  C:082CH         LINE#         11
+  C:082FH         LINE#         12
+  -------         ENDPROC       MAIN
+  -------         PROC          DELAY
+  -------         DO            
+  D:0082H         SYMBOL        i
+  -------         ENDDO         
+  C:0800H         LINE#         15
+  C:0800H         LINE#         16
+  C:0800H         LINE#         18
+  C:0819H         LINE#         19
+  -------         ENDPROC       DELAY
+  -------         ENDMOD        LED2
+
+  -------         MODULE        ?C?SLCMP
+  C:0832H         PUBLIC        ?C?SLCMP
+  -------         ENDMOD        ?C?SLCMP
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0032H BYTE ( 2%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=87
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

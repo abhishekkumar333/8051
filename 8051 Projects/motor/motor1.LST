@@ -1,0 +1,42 @@
+C51 COMPILER V8.02   MOTOR1                                                                07/29/2013 16:46:33 PAGE 1   
+
+
+C51 COMPILER V8.02, COMPILATION OF MODULE MOTOR1
+OBJECT MODULE PLACED IN motor1.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE motor1.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg51.h>
+   2          void delay();
+   3          void main()
+   4          {
+   5   1      while(1)
+   6   1      {
+   7   2      P1=0x80;
+   8   2      delay();
+   9   2      P1=0x00;
+  10   2      delay();
+  11   2      P1=0x40;
+  12   2      }
+  13   1      
+  14   1      }
+  15          void delay()
+  16          {
+  17   1      unsigned int i;
+  18   1                       for(i=0;i<100000;i++);
+  19   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     44    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

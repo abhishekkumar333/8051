@@ -1,0 +1,73 @@
+C51 COMPILER V8.02   7SEGMENT1                                                             07/30/2013 16:14:19 PAGE 1   
+
+
+C51 COMPILER V8.02, COMPILATION OF MODULE 7SEGMENT1
+OBJECT MODULE PLACED IN 7segment1.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE 7segment1.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg51.h>
+   2          sbit a=P3^7;
+   3          sbit b=P3^6;
+   4          sbit c=P3^5;
+   5          sbit d=P3^4;
+   6          void delay();
+   7          void main()
+   8          {
+   9   1      
+  10   1       a=0,b=0,c=0,d=0;
+  11   1       P2=0x88;
+  12   1       delay();
+  13   1       P2=0xEB;
+  14   1       delay();
+  15   1       P2=0x4C;
+  16   1       delay();
+  17   1       P2=0x49;
+  18   1       delay();
+  19   1       P2=0x2B;
+  20   1       delay();
+  21   1       P2=0x19;
+  22   1       delay();
+  23   1       P2=0x18;
+  24   1       delay();
+  25   1       P2=0x8B;
+  26   1       delay();
+  27   1       P2=0x08;
+  28   1       delay();
+  29   1       P2=0x0B;
+  30   1       delay();
+  31   1       P2=0x0A;
+  32   1       delay();
+  33   1       P2=0x08;
+  34   1       delay();
+  35   1       P2=0x9C;
+  36   1       delay();
+  37   1       P2=0x88;
+  38   1       delay();
+  39   1       P2=0x1C;
+  40   1       delay();
+  41   1       P2=0x1E;
+  42   1       delay();
+  43   1      }
+  44          void delay()
+  45          {
+  46   1      int i;
+  47   1      for(i=0;i<30000;i++);
+  48   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    119    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+C51 COMPILER V8.02   7SEGMENT1                                                             07/30/2013 16:14:19 PAGE 2   
+
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
