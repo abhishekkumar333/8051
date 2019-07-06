@@ -18,5 +18,5 @@ void main ()
 void delay()
 {
 int i;
-for(i=0;i<30000;i++);
+for(i=0;i<60000;i++);
 }
